@@ -45,6 +45,12 @@
             return emailRegex.test(email);
         }
 
+        // Function to validate password length (at least 8 characters)
+        function isValidPassword(password) {
+            const passwordRegex = /^.{8,}$/;
+            return passwordRegex.test(password);
+        }
+
         // Function to show error
         function showError(field, message) {
             // Add error class to field
@@ -90,6 +96,13 @@
             if (!isValidEmail(email)) {
                 event.preventDefault();
                 showError(emailField, 'Please enter a valid email address.');
+                return;
+            }
+
+            // Validate password length
+            if (!isValidPassword(password)) {
+                event.preventDefault();
+                showError(passwordField, 'Password must be at least 8 characters long.');
                 return;
             }
 
