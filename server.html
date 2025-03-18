@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-server.css">
+    <meta name="description" content="Server Page for New User Registration">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Brett Smith">
+    <title>Server Page for New User Registration</title>
+</head>
+
+<body>
+    <h1>Server Page for New User Registration</h1>
+    <div id="response"></div>
+    <p>Thank you for registering!</p>
+    <p>Your account has been created with the following information:</p>
+    <ul>
+        <li>Name: <span id="name"></span></li>
+        <li>Email: <span id="email"></span></li>
+        <li>Password: <span id="password"></span></li>
+    </ul>
+    <p><em>NOTE: This is a static page and does not actually create a new user account.</em></p>
+    <p><a href="index.html">Return to Registration Form</a></p>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const name = params.get("name");
+        const email = params.get("email");
+        const password = params.get("password");
+
+        const response = document.getElementById("response");
+        const nameElement = document.getElementById("name");
+        const emailElement = document.getElementById("email");
+        const passwordElement = document.getElementById("password");
+
+        nameElement.textContent = name;
+        emailElement.textContent = email;
+        passwordElement.textContent = password;
+    </script>
+</body>
+
+</html>

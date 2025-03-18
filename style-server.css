@@ -1,0 +1,39 @@
+/* styles for server.html */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #c7f5ad;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #302c2c;
+    font-size: 45px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+p {
+    text-align: center;
+    color: #220606;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+ul {
+    text-align: center;
+    color: #131212;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-block: 10px;
+    list-style-type: none;
+    border: 2px solid #333;
+    border-radius: 5px;
+    width: 50%;
+    margin: auto;
+    background-color: #83f7f1;
+}
